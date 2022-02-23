@@ -332,10 +332,10 @@ border-radius: 4px;
 
   color: var(--title-text-color);
 }
-.modal__form {
+.form {
   width: 100%;
 }
-.modal__field {
+.form__field {
   position: relative;
 
   display: flex;
@@ -343,7 +343,8 @@ border-radius: 4px;
 
   margin-bottom: 10px;
 }
-.modal__label {
+.form__label,
+.form__comment{
   margin-bottom: 4px;
   margin-right: auto;
 
@@ -351,7 +352,7 @@ border-radius: 4px;
   line-height: 1.17;
   letter-spacing: 0.01em;
 }
-.modal__input {  
+.form__input {  
   padding-top: 12px;
   padding-right: 12px;
   padding-bottom: 12px;
@@ -367,7 +368,7 @@ border-radius: 4px;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal__icon  {
+.form__icon  {
   position: absolute;
   bottom: 11px;
   left: 12px;
@@ -378,15 +379,15 @@ border-radius: 4px;
 
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.modal__input:hover,
-.modal__input:focus {
+.form__input:hover,
+.form__input:focus {
   border-color: var(--accent-text-color);
 }
-.modal__input:hover + .modal__icon,
-.modal__input:focus + .modal__icon {
+.form__input:hover + .form__icon,
+.form__input:focus + .form__icon {
   fill: var(--accent-text-color);
 }
-.modal__textarea { 
+.form__textarea { 
   padding: 12px 16px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   box-sizing: border-box;
@@ -397,14 +398,14 @@ border-radius: 4px;
   outline: none;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.modal__textarea::placeholder {
+.form__textarea::placeholder {
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.01em;
   color: rgba(117, 117, 117, 0.5);
 }
-.modal__textarea:hover,
-.modal__textarea:focus {
+.form__textarea:hover,
+.form__textarea:focus {
   border-color: var(--accent-text-color);
 }
 .checkbox {
@@ -495,7 +496,6 @@ border-radius: 4px;
   line-height: 1.14;
   text-transform: uppercase;
 }
-
 
 /*Блок-Чем мы занимаемся*/
 .work {
@@ -679,8 +679,6 @@ border-radius: 4px;
   line-height: 0.89;
   text-transform: uppercase;
 }
-
-
 .subscription__title {
   margin-bottom: 20px;
 
@@ -717,8 +715,7 @@ color: var(--accent-title-color);
 justify-content: center;
   margin-left: 12px;
 }
-  
-.button__icon {
+  .button__icon {
   width: 24px;
   height: 24px;
   margin-left: 10px;
@@ -726,74 +723,76 @@ justify-content: center;
 
   fill: var(--accent-title-color);
 }
+
 /*Портфолио*/
-.button.secondary {
+.filters-list {
+  display: flex;
+  justify-content: center;
+
+  margin-bottom: 50px;
+}
+.portfolio__button {
   padding: 6px 22px;
   background-color: var(--accent-two-background);
-
+  min-width: 75px;
+height: 38px;
   color: var(--title-text-color); 
   font-weight: 500;
   font-size: 16px;
   line-height: 1.62;
   text-align: center;
   letter-spacing: 0.03em;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+  color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+  box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.filters {
-  display: flex;
-  justify-content: center;
 
-  margin-bottom: 50px;
-}
-.filters .push + .push {
+.item + .item {
   margin-left: 8px;
 }
-.filters .button {
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.filters .button:hover,
-.filters .button:focus {
+ 
+.portfolio__button:hover,
+.portfolio__button:focus {
   background-color: var(--accent-text-color);
   color: var(--accent-title-color);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
 }
-.portfolio-title {
+.portfolio__title {
   color: var(--title-text-color);
 }
-.portfolio-list {
+.portfolio__list {
   display: flex;
   flex-wrap: wrap;
 }
-.flex-element {
+.portfolio__item {
   width: 370px;
 }
-.flex-element:not(:nth-child(3n)) {
+.portfolio__item:not(:nth-child(3n)) {
   margin-right: 30px;
 }
-.flex-element:not(:nth-last-child(-n + 3)) {
+.portfolio__item:not(:nth-last-child(-n + 3)) {
   margin-bottom: 30px;
 }
-.portfolio-link {
+.portfolio__link {
   display: block;
   text-decoration: none;
 
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.flex-element .portfolio-link:hover,
-.flex-element .portfolio-link:focus {
+.portfolio__link:hover,
+ .portfolio__link:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
-.portfolio-list .desc {
+.portfolio__desc {
   margin-top: 4px;
 
   color: var(--primary-text-color);
   font-size: 16px;
   line-height: 1.87;  
 }
-.portfolio-text {
+.portfolio__meta {
   border: 1px solid var(--portfolio-box-color);
   border-top-style: none;
 
@@ -802,18 +801,18 @@ justify-content: center;
   padding-bottom: 20px;
   padding-left: 24px;
 }
-.portfolio-item {
+.portfolio__subtitle {
   color: var(--title-text-color);
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
 }
-.portfolio-thumb {
+.portfolio__thumb {
   position: relative;
   overflow: hidden;
 }
-.portfolio-overlay {
+.portfolio__overlay {
   position: absolute;
   transform: translateY(0);
 
@@ -827,12 +826,12 @@ justify-content: center;
 
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1); 
 }
-.portfolio-info {
+.portfolio__text {
   font-size: 18px;
   line-height: 1.56;
   letter-spacing: 0.03em;
   color: var(--accent-title-color);
 }
-.portfolio-link:hover .portfolio-overlay {
+.portfolio__link:hover .portfolio__overlay {
   transform: translateY(-100%);
 }
