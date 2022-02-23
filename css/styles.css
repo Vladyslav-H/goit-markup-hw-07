@@ -145,21 +145,16 @@ border-radius: 4px;
   border-bottom-style: solid;
   border-bottom-color: var(--box-color);
 }
-.nav-box {
+.header-page__box,
+.nav {
   display: flex;
   align-items: center;
 }
-.main-nav {
-  display: flex;
-  align-items: center;
-}
-
-.site-nav {
+.nav__list {
   display: flex;
   margin-left: 93px;
 }
-
-.site-nav .link {
+.header-page__box .link {
   position: relative;
 
   display: block;
@@ -175,12 +170,14 @@ border-radius: 4px;
 
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-.site-nav .link:hover,
-.site-nav .link:focus {
+.nav__list .item:not(:last-child) {
+  margin-right: 50px;
+}
+.nav__list .link:hover,
+.nav__list .link:focus {
   color: var(--accent-text-color);
 }
-.site-nav .link.current {
+.nav__list .link.current {
   color: var(--accent-text-color);
 }
 .current::after {
@@ -195,14 +192,12 @@ border-radius: 4px;
   border-radius: 2px;
   content: "";
 }
-.site-nav .item:not(:last-child) {
-  margin-right: 50px;
-}
-.contacts-nav {
+
+.contacts-links {
   display: flex;
   margin-left: auto;
 }
-.contacts-nav .link {
+.contacts-links .link {
   display: flex;
   align-items: center;
 
@@ -218,21 +213,21 @@ border-radius: 4px;
 
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.contacts-nav .link:hover,
-.contacts-nav .link:focus {
+.contacts-links .link:hover,
+.contacts-links .link:focus {
   color: var(--accent-text-color);
 }
-.contacts-nav .item:not(:last-child) {
+.contacts-links .item:not(:last-child) {
   margin-right: 50px;
 }
-.top-icon {
+.header-page__icon {
   margin-right: 10px;
   fill: var(--primary-text-color);
 
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.contacts-nav .link:hover .top-icon,
-.contacts-nav .link:focus .top-icon {
+.contacts-links .link:hover .header-page__icon,
+.contacts-links .link:focus .header-page__icon {
   fill: var(--accent-text-color);
 }
 
