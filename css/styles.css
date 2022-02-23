@@ -57,7 +57,49 @@ h6 {
   color: var(--accent-title-color);
 }
 
-.image {
+/* Иконки */
+.socials {
+  display: flex;
+  justify-content: center;
+}
+.socials__item {
+  display: flex;
+
+  width: 44px;
+  height: 44px;
+}
+.socials__item + .socials__item {
+  margin-left: 10px;
+}
+.socials__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.socials__link:hover,
+.socials__link:focus {
+  background-color: var(--accent-text-color);
+}
+.socials__icon {
+  fill: var(--accent-title-color);
+}
+.team__icon {
+  fill: #afb1b8;
+
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.socials__link:hover .team__icon,
+.socials__link:focus .team__icon {
+  fill: var(--accent-title-color);
+}
+
+.image-reset {
   display: block;
   max-width: 100%;
   height: auto;
@@ -73,6 +115,7 @@ h6 {
   padding-top: 94px;
   padding-bottom: 94px;
 }
+
 /*Шапка*/
 .header-page {
   border-bottom-width: 1px;
@@ -203,7 +246,7 @@ h6 {
   text-transform: uppercase;
 }
 .button {
-  /* display: flex; */
+  
 align-items: center;
 text-align: center;
 padding-top: 10px;
@@ -221,26 +264,6 @@ color: var(--accent-title-color);
 background-color: var(--accent-text-color);
   font-family: inherit;
 }
-
- 
-
-
-/* .button.primary {
-  min-width: 200px;
-  padding: 10px 32px;
-  border-radius: 4px;
-  border: transparent;
-
-  color: var(--accent-title-color);
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.87;
-  letter-spacing: 0.06em;
-  align-items: center;
-  text-align: center;
-
-  background-color: var(--button-background);
-} */
 .hero-backdrop {
   position: fixed;
   z-index: 1;
@@ -320,7 +343,6 @@ background-color: var(--accent-text-color);
 
   margin-bottom: 10px;
 }
- 
 .modal-form__field label {
   margin-bottom: 4px;
   margin-right: auto;
@@ -356,7 +378,6 @@ background-color: var(--accent-text-color);
 
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
 .modal-form__input:hover,
 .modal-form__input:focus {
   border-color: var(--accent-text-color);
@@ -365,7 +386,6 @@ background-color: var(--accent-text-color);
 .modal-form__input:focus + .modal-form__icon {
   fill: var(--accent-text-color);
 }
-
 .modal-form__field textarea { 
   padding: 12px 16px;
   border: 1px solid rgba(33, 33, 33, 0.2);
@@ -387,7 +407,6 @@ background-color: var(--accent-text-color);
 .modal-form__field textarea:focus {
   border-color: var(--accent-text-color);
 }
-
 .checkbox-field {
   display: flex; 
   justify-content: space-around;
@@ -404,7 +423,6 @@ background-color: var(--accent-text-color);
   letter-spacing: 0.03em;
   color: var(--primary-text-color);
 }
-
 .checkbox-input {
   border: 0;
   clip: rect(0 0 0 0);
@@ -432,11 +450,9 @@ background-color: var(--accent-text-color);
   background-origin: content-box;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
 .checkbox-input:checked + .checkbox-icon-check {
   background-color: var(--accent-text-color);
 }
- 
 
 /*Блок-Особенности*/
 .feature-list {
@@ -476,13 +492,7 @@ background-color: var(--accent-text-color);
 .work {
   padding-bottom: 94px;
 }
-.work-list {
-  display: flex;
-}
-.work-list .foto + .foto {
-  margin-left: 30px;
-}
-.work-title {
+.work__title {
   margin-bottom: 50px;
 
   color: var(--title-text-color);
@@ -491,20 +501,25 @@ background-color: var(--accent-text-color);
   line-height: 1.17;
   text-align: center;
 }
-.foto {
+.work__list {
+  display: flex;
+}
+.work__list .work__item + .work__item {
+  margin-left: 30px;
+}
+.work__item {
   position: relative;
 }
-.work-box {
+.work__box {
   position: absolute;
   bottom: 0;
   left: 0;  
 
   width: 100%;
   min-height: 70px;
-  background: rgba(47, 48, 58, 0.8);
-  
+  background: rgba(47, 48, 58, 0.8); 
 }
-.work-text {
+.work__text {
   margin-top: 27px;
 
   color: var(--accent-title-color);  
@@ -529,7 +544,6 @@ background-color: var(--accent-text-color);
   line-height: 1.17;
   text-align: center;
 }
-
 .members__name {
   margin-bottom: 10px;
 
@@ -542,7 +556,6 @@ background-color: var(--accent-text-color);
 .members {
   display: flex;
 }
-
 .members__card {
   background-color: var(--accent-title-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
@@ -562,18 +575,10 @@ background-color: var(--accent-text-color);
 .team__socials {
   margin-top: 16px;
 }
- 
- 
-
 .team-text .team-social-item + .team-social-item {
   margin-left: 10px;
 }
- 
 
-.socials__link:hover .team__icon,
-.socials__link:focus .team__icon {
-  fill: var(--accent-title-color);
-}
 
 /* Постоянные клиенты */
 .clients__title {
@@ -664,47 +669,9 @@ background-color: var(--accent-text-color);
   font-size: 14px;
   line-height: 0.89;
   text-transform: uppercase;
- 
-}
-.socials {
-  display: flex;
-  justify-content: center;
-}
-.socials__item {
-  display: flex;
-
-  width: 44px;
-  height: 44px;
-}
-.socials__item + .socials__item {
-  margin-left: 10px;
-}
-.socials__link {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  /* background-color: rgba(255, 255, 255, 0.1); */
-
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.socials__link:hover,
-.socials__link:focus {
-  background-color: var(--accent-text-color);
-}
 
-.socials__icon {
-  fill: var(--accent-title-color);
-}
-.team__icon {
-  fill: #afb1b8;
-
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
 .subscription__title {
   margin-bottom: 20px;
 
