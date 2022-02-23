@@ -246,7 +246,6 @@ h6 {
   text-transform: uppercase;
 }
 .button {
-  
 align-items: center;
 text-align: center;
 padding-top: 10px;
@@ -455,28 +454,27 @@ background-color: var(--accent-text-color);
 }
 
 /*Блок-Особенности*/
-.feature-list {
+.feature__title {
+  color: var(--title-text-color);
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+.feature__list {
   display: flex;
 }
-.feature-list .item + .item {
+.feature__list .feature__item + .feature__item {
   margin-left: 30px;
 }
-.feature-list .item {
+.feature__item {
   width: 270px;
 }
-.feature-title {
-  color: var(--title-text-color);
-}
-.feature-item {
-  margin-bottom: 10px;
-
-  color: var(--title-text-color);
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1.14;
-  text-transform: uppercase;
-}
-.feature-box {
+.feature__box {
   width: 270px;
   height: 120px;
   background: var(--accent-two-background);
@@ -487,6 +485,16 @@ background-color: var(--accent-text-color);
   align-items: center;
   justify-content: center;
 }
+.feature__subtitle {
+  margin-bottom: 10px;
+
+  color: var(--title-text-color);
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+}
+
 
 /*Блок-Чем мы занимаемся*/
 .work {
