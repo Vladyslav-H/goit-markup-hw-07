@@ -1,10 +1,21 @@
+.checkbox__input, .feature__title, .portfolio__title {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
 body {
   background-color: #ffffff;
   color: #757575;
   font-family: Roboto, sans-serif;
-  letter-spacing: 0.03em;
   font-size: 14px;
   line-height: 1.71;
+  letter-spacing: 0.03em;
 }
 
 ul {
@@ -107,12 +118,12 @@ h6 {
   padding-top: 32px;
   padding-bottom: 32px;
   color: #212121;
+  text-decoration: none;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
-  text-decoration: none;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .nav__list {
@@ -155,12 +166,12 @@ h6 {
   padding-top: 32px;
   padding-bottom: 32px;
   color: #757575;
+  text-decoration: none;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
-  text-decoration: none;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contacts-links .link:hover,
@@ -200,11 +211,11 @@ h6 {
 .hero__tytle {
   margin-bottom: 30px;
   color: #ffffff;
+  text-transform: uppercase;
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
   letter-spacing: 0.06em;
-  text-transform: uppercase;
 }
 
 .backdrop {
@@ -261,12 +272,12 @@ h6 {
 
 .modal__title {
   margin-bottom: 12px;
+  text-align: center;
+  color: #212121;
   font-weight: 700;
   font-size: 20px;
   line-height: 1.15;
   letter-spacing: 0.03em;
-  text-align: center;
-  color: #212121;
 }
 
 .form {
@@ -334,10 +345,10 @@ h6 {
 }
 
 .form__textarea::placeholder {
+  color: rgba(117, 117, 117, 0.5);
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.01em;
-  color: rgba(117, 117, 117, 0.5);
 }
 
 .form__textarea:hover, .form__textarea:focus {
@@ -354,21 +365,10 @@ h6 {
 .checkbox__label {
   display: flex;
   align-items: center;
+  color: #757575;
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
-  color: #757575;
-}
-
-.checkbox__input {
-  border: 0;
-  clip: rect(0 0 0 0);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  width: 1px;
 }
 
 .checkbox__link {
@@ -393,14 +393,6 @@ h6 {
 
 .feature__title {
   color: #212121;
-  border: 0;
-  clip: rect(0 0 0 0);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  width: 1px;
 }
 
 .feature__list {
@@ -429,10 +421,10 @@ h6 {
 .feature__subtitle {
   margin-bottom: 10px;
   color: #212121;
+  text-transform: uppercase;
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
-  text-transform: uppercase;
 }
 
 .work {
@@ -442,10 +434,10 @@ h6 {
 .work__title {
   margin-bottom: 50px;
   color: #212121;
+  text-align: center;
   font-weight: 700;
   font-size: 36px;
   line-height: 1.17;
-  text-align: center;
 }
 
 .work__list {
@@ -472,12 +464,12 @@ h6 {
 .work__text {
   margin-top: 27px;
   color: #ffffff;
+  text-align: center;
+  text-transform: uppercase;
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
-  text-align: center;
   letter-spacing: 0.03em;
-  text-transform: uppercase;
 }
 
 .team {
@@ -487,19 +479,19 @@ h6 {
 .team__title {
   margin-bottom: 50px;
   color: #212121;
+  text-align: center;
   font-weight: 700;
   font-size: 36px;
   line-height: 1.17;
-  text-align: center;
 }
 
 .members__name {
   margin-bottom: 10px;
   color: #212121;
+  text-align: center;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.19;
-  text-align: center;
 }
 
 .members {
@@ -546,9 +538,9 @@ h6 {
 .clients__title {
   margin-bottom: 50px;
   color: #212121;
+  text-align: center;
   font-size: 36px;
   line-height: 1.17;
-  text-align: center;
 }
 
 .clients__list {
@@ -634,9 +626,9 @@ h6 {
 .socials__title {
   margin-bottom: 20px;
   color: #ffffff;
+  text-transform: uppercase;
   font-size: 14px;
   line-height: 0.89;
-  text-transform: uppercase;
 }
 
 .socials__item {
@@ -667,12 +659,12 @@ h6 {
 
 .subscription__title {
   margin-bottom: 20px;
+  color: #ffffff;
+  text-transform: uppercase;
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.03em;
-  text-transform: uppercase;
-  color: #ffffff;
 }
 
 .subscription {
@@ -680,10 +672,10 @@ h6 {
 }
 
 .subscription::placeholder {
+  color: rgba(255, 255, 255, 0.6);
   font-size: 16px;
   line-height: 1.25;
   letter-spacing: 0.03em;
-  color: rgba(255, 255, 255, 0.6);
 }
 
 .subscription__input {
@@ -724,12 +716,12 @@ h6 {
   min-width: 75px;
   height: 38px;
   color: #212121;
+  text-align: center;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
   font-weight: 500;
   font-size: 16px;
   line-height: 1.62;
-  text-align: center;
   letter-spacing: 0.03em;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio__button:hover, .portfolio__button:focus {
@@ -744,14 +736,6 @@ h6 {
 
 .portfolio__title {
   color: #212121;
-  border: 0;
-  clip: rect(0 0 0 0);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  width: 1px;
 }
 
 .portfolio__list {
@@ -823,10 +807,10 @@ h6 {
 }
 
 .portfolio__text {
+  color: #ffffff;
   font-size: 18px;
   line-height: 1.56;
   letter-spacing: 0.03em;
-  color: #ffffff;
 }
 
 .portfolio__link:hover .portfolio__overlay {
