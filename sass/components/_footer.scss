@@ -19,8 +19,8 @@
   color: $accent-hidden-color;
 }
 
-.contacts-item + .contacts-item:not(:first-child) {
-  margin-top: 9px;
+.contacts__item:not(:last-child) {
+  margin-bottom: 9px;
 }
 
 .contacts__link--inverse {

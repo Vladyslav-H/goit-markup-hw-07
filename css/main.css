@@ -600,8 +600,8 @@ h6 {
   color: rgba(255, 255, 255, 0.6);
 }
 
-.contacts-item + .contacts-item:not(:first-child) {
-  margin-top: 9px;
+.contacts__item:not(:last-child) {
+  margin-bottom: 9px;
 }
 
 .contacts__link--inverse {
