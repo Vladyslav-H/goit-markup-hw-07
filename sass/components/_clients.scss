@@ -1,14 +1,14 @@
 .clients__title {
   margin-bottom: 50px;
   color: $title-text-color;
-  // font-size: 36px;
-  // line-height: 1.17;
   text-align: center;
   @include fonts(null, null, 36px, 1.17, null);
 }
+
 .clients__list {
   display: flex;
 }
+
 .clients__item {
   display: flex;
   width: 170px;
@@ -18,6 +18,7 @@
     margin-left: 30px;
   }
 }
+
 .clients__link {
   display: flex;
   align-items: center;
@@ -34,6 +35,7 @@
     border-color: $accent-text-color;
   }
 }
+
 .clients__icon {
   fill: $icons-color;
   transition: fill $animation;

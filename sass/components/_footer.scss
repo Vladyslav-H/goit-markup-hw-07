@@ -1,26 +1,27 @@
 .footer-page {
   padding-top: 60px;
   padding-bottom: 60px;
-  background-color: $accent-bacground;
-  // font-size: 14px;
-  // line-height: 1.71;
+  background-color: $accent-bacground;  
   @include fonts(null, null, 14px, 1.71, null);
 }
+
 .footer-page__logo {
   color: $accent-title-color;
 }
+
 .footer-page__flex {
   display: flex;
   align-items: baseline;
   justify-content: space-between;
 }
+
 .contacts__link {
   color: $accent-hidden-color;
 }
 
-    .contacts-item + .contacts-item:not(:first-child) {
-    margin-top: 9px;
-  }
+.contacts-item + .contacts-item:not(:first-child) {
+  margin-top: 9px;
+}
 
 .contacts__link--inverse {
   color: $accent-title-color;
@@ -41,12 +42,10 @@
 
 .socials__title {
   margin-bottom: 20px;
-  color: $accent-title-color;
-  // font-size: 14px;
-  // line-height: 0.89;
-  // text-transform: uppercase;
-  @include fonts(uppercase, null, 14px, 0.89, null);
+  color: $accent-title-color; 
+  @include fonts(uppercase, 700, 14px, 0.89, null);
 }
+
 .socials__item {
   display: flex;
   background: rgba(255, 255, 255, 0.1);
@@ -75,26 +74,20 @@
 }
 
 .subscription__title {
-  margin-bottom: 20px;
-  // font-weight: 700;
-  // font-size: 14px;
-  // line-height: 1.14;
-  // letter-spacing: 0.03em;
-  // text-transform: uppercase;
+  margin-bottom: 20px;  
   color: $accent-title-color;
   @include fonts(uppercase, 700, 14px, 1.14, 0.03em);
 }
+
 .subscription {
   display: flex;
 
-  &::placeholder {
-    // font-size: 16px;
-    // line-height: 1.25;
-    // letter-spacing: 0.03em;
+  &::placeholder {    
     color: $accent-hidden-color;
     @include fonts(null, null, 16px, 1.25, 0.03em);
   }
 }
+
 .subscription__input {
   width: 358px;
   height: 50px;
@@ -112,6 +105,7 @@
   justify-content: center;
   margin-left: 12px;
 }
+
 .button__icon {
   width: 24px;
   height: 24px;
